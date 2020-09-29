@@ -1,3 +1,4 @@
+// const { Model } = require("sequelize/types");
 
 /**
  * Inserts a certain character until a has the desired length
@@ -9,3 +10,6 @@ function padLeft(val, num, str) {
 }
 
 // YOUR CODE GOES HERE
+module.exports = padLeft
+
+console.log(padLeft("rezan", 4, "$"))
