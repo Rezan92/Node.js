@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 /**
  * 1. Chuck Norris programs do not accept input
  * 
@@ -10,9 +11,16 @@
  * - Print the entire response to the console to see how it is structured.
  */
 
-function printChuckNorrisJoke() {
+async function printChuckNorrisJoke() {
   // YOUR CODE GOES IN HERE
 
+  try {
+    const response = await fetch("http://api.icndb.com/jokes/random?escape=javascript");
+    const text = await response.text();
+    console.log(JSON.parse(text).value.joke);
+  } catch (error) {
+    console.log(error);
+  };
 }
 
 printChuckNorrisJoke();
