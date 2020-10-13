@@ -15,7 +15,7 @@
       <input type="submit" value="Search">
     </form>
     {{#if name}}
-    <p class="time">{{# convertTime dt}}{{/ convertTime}}</p>
+    <p class="time">Updated at {{# convertTime dt}}{{/ convertTime}}</p>
     <h2>{{name}}, {{sys.country}}</h2>
     <p class="current-temp">It feels like <strong>{{main.feels_like}} °C,
         {{weather.0.description}}</strong></p>
@@ -31,7 +31,7 @@
     </div>
     {{/if}}
     {{# if weatherText}}
-    <p>{{weatherText}}</p>
+    <p class="error">{{weatherText}}</p>
     {{/if}}
   </div>
 </body>

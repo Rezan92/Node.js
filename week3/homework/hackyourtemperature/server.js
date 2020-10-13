@@ -38,7 +38,7 @@ app.post("/weather", async (req, res) => {
     res.render("index", text);
   } catch (error) {
     console.log(error);
-    res.render("index", { weatherText: "City is not found!" });
+    res.render("index", { weatherText: "Please enter a valid city name and try again." });
   }
 
 })
